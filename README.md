@@ -18,13 +18,23 @@ The canonical version of every product fact lives on the website. Where an artic
 
 ## Official API example repositories
 
-Each product has its own repository with an OpenAPI contract, a machine-readable `product.json`, an `llms.txt` summary and runnable examples in seven languages.
+One repository per product, each with an OpenAPI contract, a machine-readable `product.json`, an `llms.txt` summary and runnable examples in seven languages.
 
-| Product | Repository |
-|---|---|
-| [WhatsApp avatar analysis](https://github.com/avatarlookup/whatsapp-avatar-profile-api) | `whatsapp-avatar-profile-api` |
-| [Email avatar analysis](https://github.com/avatarlookup/email-avatar-profile-api) | `email-avatar-profile-api` |
-| [Image profile analysis](https://github.com/avatarlookup/image-profile-analysis-api) | `image-profile-analysis-api` |
+| Product | Shape | Repository |
+|---|---|---|
+| [WhatsApp avatar analysis](https://github.com/avatarlookup/whatsapp-avatar-profile-api) | Realtime | `whatsapp-avatar-profile-api` |
+| [Email avatar analysis](https://github.com/avatarlookup/email-avatar-profile-api) | Realtime | `email-avatar-profile-api` |
+| [Image profile analysis](https://github.com/avatarlookup/image-profile-analysis-api) | Realtime | `image-profile-analysis-api` |
+| [Email Bulk Avatar Check](https://github.com/avatarlookup/email-bulk-avatar-api) | Bulk (async) | `email-bulk-avatar-api` |
+| [LINE Bulk Avatar Analysis](https://github.com/avatarlookup/line-bulk-profile-api) | Bulk (async) | `line-bulk-profile-api` |
+| [MAX Bulk Number Profile](https://github.com/avatarlookup/max-bulk-profile-api) | Bulk (async) | `max-bulk-profile-api` |
+| [Telegram Bulk Number Profile](https://github.com/avatarlookup/telegram-bulk-number-profile-api) | Bulk (async) | `telegram-bulk-number-profile-api` |
+| [Telegram Bulk Username Profile](https://github.com/avatarlookup/telegram-bulk-username-profile-api) | Bulk (async) | `telegram-bulk-username-profile-api` |
+| [Viber Bulk Number Profile](https://github.com/avatarlookup/viber-bulk-profile-api) | Bulk (async) | `viber-bulk-profile-api` |
+| [WhatsApp Bulk Avatar Analysis](https://github.com/avatarlookup/whatsapp-bulk-avatar-api) | Bulk (async) | `whatsapp-bulk-avatar-api` |
+| [Zalo Bulk Number Profile](https://github.com/avatarlookup/zalo-bulk-profile-api) | Bulk (async) | `zalo-bulk-profile-api` |
+
+A **realtime** check answers inside the same HTTP response (`POST /api/v1/check`, or `POST /api/v1/batch-check` for up to 100 identifiers). A **bulk task** takes a file and answers later (`POST /api/v1/bulk-tasks`). They are separate endpoints and are not interchangeable.
 
 ## Responsible use
 
